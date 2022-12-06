@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+package second;
+
+// The greeting service definition.
+service Second {
+  // Sends a greeting
+  rpc TestMethod (Entry) returns (Out);
+ 
+}
+
+// The request message containing the user's name.
+message Entry {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message Out {
+  string message = 1;
+}
+
